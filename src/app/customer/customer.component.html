@@ -1,0 +1,41 @@
+<button style="float: right;">Add Customer</button> <br/>
+<table id = "customerTable"  border = 1>
+    <thead>
+        <tr>
+            <th>
+                CustomerName
+            </th>
+            <th>
+                Customer Email
+            </th>
+            <th>
+                Address
+            </th>
+            <th>
+                Edit
+            </th>
+            <th>
+                Delete
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor = "let customer of customers;">
+            <td>
+                {{customer.CustomerName}}
+            </td>
+            <td>
+                {{customer.Email}}
+            </td>
+            <td>
+                {{customer.Address}}
+            </td>
+            <td>    
+                <a href="#">Edit</a>
+            </td>
+            <td>
+                <a href="#">Delete</a>
+            </td>
+        </tr>
+    </tbody>
+</table>
