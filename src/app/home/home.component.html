@@ -1,1 +1,7 @@
-<p>home works!</p>
+<div style="border:3px solid;">Parent<br/>
+    Data: {{dataFromChild}} <br/>
+    <button (click) = "SendDataToChild()">Data from Parent To Child</button>
+    <div style="border: 4px solid;margin:40px;"> Child <br/>
+        <app-child  [parentInputData] = "data" (childToParent) = "DataComingFromChildToParent($event)"></app-child>
+    </div>
+</div>
