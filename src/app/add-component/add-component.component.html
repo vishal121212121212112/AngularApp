@@ -1,0 +1,17 @@
+<div> 
+    <form [formGroup]="formdata" (ngSubmit)="onClickSubmit(formdata.value)" > 
+       <input type= "text"  name="userName" placeholder="userName" 
+          formControlName = "userName"> 
+          <input type= "text"  name="address" placeholder="Address" 
+          formControlName = "address"> 
+          <input type= "text"  name="email" placeholder="email" 
+          formControlName = "email"> 
+       <br/>
+       <br/>
+       <input type="submit"  value="Show Data"> 
+       <input type="submit"  (click)="saveCustomer()" value="Save here"> 
+    </form>
+ </div> 
+ <p> Username  is: {{userName}} </p>
+ <p> Address of the user is: {{address}} </p>
+ <p> Email of the user is: {{email}} </p>
