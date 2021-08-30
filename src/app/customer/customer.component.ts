@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { CustomerService } from '../customer.service';
 import { Customer } from '../models/Customer';
+import { UtilityService } from '../utility.service';
 @Component({
   selector: 'app-customer',
   templateUrl: './customer.component.html',
@@ -9,7 +10,7 @@ import { Customer } from '../models/Customer';
 export class CustomerComponent implements OnInit {
 
   public customers: Customer[] = [];
-  constructor(private customerService: CustomerService) { 
+  constructor(private customerService: CustomerService, private _utilityService:UtilityService) { 
     
   }
 
@@ -18,4 +19,7 @@ export class CustomerComponent implements OnInit {
       this.customers = res;
     });
   }
+  sendDataBySubject() {
+    this._utilityService.sharedData.next('Hi I am coming through subject');
+  } 
 }

@@ -6,27 +6,25 @@ import { FormGroup, FormControl } from '@angular/forms';
   styleUrls: ['./add-component.component.css']
 })
 export class AddComponentComponent implements OnInit {
-  
-    userName : any;
-    formdata : any;
+
+  formdata: any;
+  userName: any;
   address: any;
-  email : any;
+  email: any;
 
   ngOnInit(): void {
-    this.formdata= new FormGroup({
-      userName : new FormControl(""),
+    this.formdata = new FormGroup({
+      userName: new FormControl(""),
       email: new FormControl(""),
       address: new FormControl("")
     });
   }
-  saveCustomer(data:any)
-  {
+  saveCustomer(data: any) {
     this.userName = data.userName;
     this.email = data.email;
-    this.address = data.address;    
+    this.address = data.address;
   }
-  onClickSubmit(data : any  )
-  {
+  onClickSubmit(data: any) {
     this.userName = data.userName;
     this.email = data.email;
     this.address = data.address;
