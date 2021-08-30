@@ -1,4 +1,4 @@
-<button style="float: right;">Add Customer</button> <br/>
+<button style="float: right;" ><a routerLink="/form">Add Customer</a></button> <br/>
 <table id = "customerTable"  border = 1>
     <thead>
         <tr>
@@ -10,6 +10,9 @@
             </th>
             <th>
                 Address
+            </th>
+            <th>
+                Contact
             </th>
             <th>
                 Edit
@@ -29,6 +32,9 @@
             </td>
             <td>
                 {{customer.Address}}
+            </td>
+            <td>
+                {{customer.Contact}}
             </td>
             <td>    
                 <a href="#">Edit</a>
