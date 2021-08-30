@@ -1,3 +1,15 @@
 <div style="height: 60px;background-color: cadetblue;margin-bottom: 20px;">
-<div></div>
+    <div class="tab">
+        <ul class="tab-items">
+            <li class="tab-items">
+                <a class="item-link" (click)="select('home')">
+                    <mat-icon  aria-hidden="false" aria-label="Example home icon">home</mat-icon>
+                    <span>Home</span>
+                </a>
+            </li>
+            <li class="tab-items">
+                <a class="item-link" (click)="select('Customers')">Customers</a>
+            </li>
+        </ul>
+    </div>
 </div>

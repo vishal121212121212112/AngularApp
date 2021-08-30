@@ -10,6 +10,8 @@ import { HttpClientModule } from '@angular/common/http';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import { AddComponentComponent } from './add-component/add-component.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import {MatIconModule} from '@angular/material/icon';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -25,7 +27,9 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     HttpClientModule,
     MatFormFieldModule,
     FormsModule,
-    ReactiveFormsModule 
+    MatIconModule,
+    ReactiveFormsModule,
+    BrowserAnimationsModule 
   ],
   providers: [],
   bootstrap: [AppComponent]

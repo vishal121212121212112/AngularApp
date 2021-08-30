@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl } from '@angular/forms';
+import { CustomerService } from '../customer.service';
+import { Customer } from '../models/Customer';
 @Component({
   selector: 'app-add-component',
   templateUrl: './add-component.component.html',
@@ -11,23 +13,28 @@ export class AddComponentComponent implements OnInit {
   userName: any;
   address: any;
   email: any;
+  contact: any;
 
+  constructor(private customerService: CustomerService){
+
+  }
   ngOnInit(): void {
     this.formdata = new FormGroup({
-      userName: new FormControl(""),
+      customerName: new FormControl(""),
       email: new FormControl(""),
-      address: new FormControl("")
+      address: new FormControl(""),
+      contact: new FormControl("")
     });
   }
-  saveCustomer(data: any) {
-    this.userName = data.userName;
-    this.email = data.email;
-    this.address = data.address;
-  }
-  onClickSubmit(data: any) {
-    this.userName = data.userName;
-    this.email = data.email;
-    this.address = data.address;
+ saveCustomer(data :Customer)
+  {
+    this.customerService.addCustomerTest().subscribe(() => {
+      alert();
+    })
+    
+    // this.customerService.saveCustomer(data).subscribe((res) => {
+    //   console.log(res); 
+    // });
   }
 
 }

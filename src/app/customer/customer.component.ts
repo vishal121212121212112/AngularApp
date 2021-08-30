@@ -15,11 +15,11 @@ export class CustomerComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.customerService.getCustomer('https://localhost:44356/api/values').subscribe((res) => {
+    this.customerService.getCustomer().subscribe((res) => {
       this.customers = res;
     });
   }
   sendDataBySubject() {
     this._utilityService.sharedData.next('Hi I am coming through subject');
   } 
-}
+ }
