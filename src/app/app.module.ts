@@ -8,10 +8,9 @@ import { CustomerComponent } from './customer/customer.component';
 import { HomeComponent } from './home/home.component';
 import { MenuComponent } from './menu/menu.component';
 import { HttpClientModule } from '@angular/common/http';
-import {MatFormFieldModule} from '@angular/material/form-field';
-import { AddComponentComponent } from './add-component/add-component.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import {MatIconModule} from '@angular/material/icon';
+import { FormComponent } from './form/form.component';
 
 @NgModule({
   declarations: [
@@ -19,17 +18,14 @@ import {MatIconModule} from '@angular/material/icon';
     CustomerComponent,
     HomeComponent,
     MenuComponent,
-    AddComponentComponent
+    FormComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    MatFormFieldModule,
     FormsModule,
-    MatIconModule,
-    ReactiveFormsModule,
-    BrowserAnimationsModule 
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
