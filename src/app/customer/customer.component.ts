@@ -16,7 +16,7 @@ export class CustomerComponent implements OnInit {
 
   ngOnInit(): void {
     this.customerService.getCustomer().subscribe((res) => {
-      this.customers = res;
+      this.customers = res; 
     });
   }
   sendDataBySubject() {
